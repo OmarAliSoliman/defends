@@ -6,63 +6,79 @@ $(document).ready(function () {
     var mobileNavbarTimeLine = gsap.timeline();
     mobileNavbarTimeLine
       .from(".side_nav", { width: 0, padding: "0", x: 5, ease: "ease" })
-      .from(".side_nav .close_nav", { opacity: 0, y: 5, ease: "ease", stagger: .05 })
+      .from(".side_nav .close_nav", {
+        opacity: 0,
+        y: 5,
+        ease: "ease",
+        stagger: 0.05,
+      })
       .from(".side_nav .logo", { opacity: 0, y: 5, ease: "ease" }, ".4")
-      .from(".side_nav li", { opacity: 0, y: 10, ease: "ease", stagger: .05 }, ".4")
-      // .from(".side_nav .lang", { opacity: 0, x: 5, ease: "ease" }, ".4")
-      // .from(".side_nav .second_logo", { opacity: 0, x: 5, ease: "ease" }, ".4")
+      .from(
+        ".side_nav li",
+        { opacity: 0, y: 10, ease: "ease", stagger: 0.05 },
+        ".4"
+      );
+    // .from(".side_nav .lang", { opacity: 0, x: 5, ease: "ease" }, ".4")
+    // .from(".side_nav .second_logo", { opacity: 0, x: 5, ease: "ease" }, ".4")
 
     mobileNavbarTimeLine.reversed(true);
 
-    $(".custom_navbar .nav_icon").on('click', function (e) {
-      console.log("f")
+    $(".custom_navbar .nav_icon").on("click", function (e) {
+      console.log("f");
       mobileNavbarTimeLine.reversed(false);
       $(".bg_opennav").addClass("bg_opennav_active");
-    })
+    });
 
-
-    $(".side_nav .close_nav").on('click', function (e) {
+    $(".side_nav .close_nav").on("click", function (e) {
       mobileNavbarTimeLine.reversed(true);
       setTimeout(() => {
         $(".bg_opennav").removeClass("bg_opennav_active");
-      }, 1000)
+      }, 1000);
+    });
 
-    })
-
-
-    $(".side_nav a").on('click', function (e) {
+    $(".side_nav a").on("click", function (e) {
       mobileNavbarTimeLine.reversed(true);
       // $(".bg_opennav").removeClass("bg_opennav_active");
       setTimeout(() => {
         $(".bg_opennav").removeClass("bg_opennav_active");
-      }, 1000)
-    })
+      }, 1000);
+    });
 
-    $(".bg_opennav").on('click', function (e) {
+    $(".bg_opennav").on("click", function (e) {
       mobileNavbarTimeLine.reversed(true);
       // $(this).removeClass("bg_opennav_active");
       setTimeout(() => {
         $(".bg_opennav").removeClass("bg_opennav_active");
-      }, 1000)
-    })
-
+      }, 1000);
+    });
   }
 
-  if($(".footer").length){
-    $(".footer .back_to_top").on('click', function(e){
+  if ($(".footer").length) {
+    $(".footer .back_to_top").on("click", function (e) {
       e.preventDefault();
-      $('html, body').animate({scrollTop:0}, '300');
-    })
+      $("html, body").animate({ scrollTop: 0 }, "300");
+    });
   }
 
-  if($(".custom_navbar").length){
-    $(window).scroll(()=>{
-      if($(this).scrollTop() > 10){
-        $(".custom_navbar").addClass("fixed_navbar")
-      }else{
-        $(".custom_navbar").removeClass("fixed_navbar")
+  if ($(".custom_navbar").length) {
+    $(window).scroll(() => {
+      if ($(this).scrollTop() > 10) {
+        $(".custom_navbar").addClass("fixed_navbar");
+      } else {
+        $(".custom_navbar").removeClass("fixed_navbar");
       }
-    })
+    });
+  }
+
+  if ($("#element").length) {
+    var typed = new Typed("#element", {
+      strings: ["Security", "Protection", "Company", "Defenders", "Team"],
+      typeSpeed: 70,
+      smartBackspace: true,
+      fadeOut: true,
+      loop: true,
+      showCursor: true,
+    });
   }
 
   AOS.init();
@@ -70,8 +86,6 @@ $(document).ready(function () {
 
 var scene = document.getElementById("scene");
 var parallaxInstance = new Parallax(scene);
-
-
 
 var overlay = document.querySelector(".splashoverlay"),
   loader = document.querySelector(".overlay-loader"),
@@ -90,20 +104,38 @@ var animateOut = function () {
 };
 
 // counter loading page
-var Cont = { val: 0 },
-  NewVal = 100;
+// var Cont = { val: 0 },
+//   NewVal = 100;
 
-TweenLite.to(Cont, 15, {
-  val: NewVal,
-  roundProps: "val",
-  onUpdate: function () {
-    document.getElementById("counter").innerHTML = Cont.val;
-  },
-});
+// TweenLite.to(Cont, 15, {
+//   val: NewVal,
+//   roundProps: "val",
+//   onUpdate: function () {
+//     document.getElementById("counter").innerHTML = Cont.val;
+//   },
+// });
+
 
 $(window).on("load", function () {
   var currentDir = $("body").css("direction");
-  setTimeout(() => {
-    animateOut();
-  }, 2000);
+  // setTimeout(() => {
+  //   animateOut();
+  // }, 2000);
+  new Mmenu("#menu", {
+    offCanvas: {
+      slidingSubmenus: false,
+      position: currentDir == "rtl" ? "left-front" : "right-front"
+    },
+    theme: "light",
+    counters: {
+      add: true,
+    },
+  });
 });
+
+// $(window).on("load", function () {
+//   var currentDir = $("body").css("direction");
+//   setTimeout(() => {
+//     // animateOut();
+//   }, 2000);
+// });
