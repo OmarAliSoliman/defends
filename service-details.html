@@ -12,40 +12,99 @@
   <!-- for english version please change bootstrap to en bootstrap ./assets/css/bootstrap.min.css -->
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
 
+  <!-- for menue in mobile -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css"
+    integrity="sha512-nNatP1G6CEh43irXY/GN4cDcLRX/R0jAYAV/ulFZcotSXcuIQE5Do4TuDOYNAD2SCIpmIbaYSllyjTysSCkpEw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!-- for animation -->
   <link rel="stylesheet" href="./assets/css/aos.css">
 
   <!-- for english version please change style to ar style ./assets/css/style-ar.css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Binn-x</title>
+  <title>DefendXpert</title>
 </head>
 
 <body class="body_color">
 
+  <!-- mobile menu -->
+  <nav id="menu">
+    <ul>
+      <li>
+        <span><a href="">Home</a></span>
+      </li>
+      <li>
+        <span><a href="">About us</a></span>
+      </li>
+
+      <li>
+        <span><a href="">Services</a></span>
+        <ul>
+          <li><a href="">All Services</a></li>
+          <li><a href="">Mobile Application Development</a></li>
+          <li><a href="">Web Applications</a></li>
+          <li><a href="">Online Marketing</a></li>
+          <li><a href="">Blockchain Development</a></li>
+          <li><a href="">Smart Contract Audit</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <span><a href="">Our Team</a></span>
+      </li>
+
+      <li>
+        <span><a href="">Contact</a></span>
+      </li>
+
+    </ul>
+  </nav>
+
   <div class="custom_navbar">
     <div class="container">
       <div class="row">
-        <div class="col-sm-12 col-md-4 col-lg-3">
+        <div class="col-6 col-md-3 col-lg-3">
           <div class="logo">
             <a href="">Logo</a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-8 col-lg-9">
+        <div class="col-6 col-md-9 col-lg-9">
           <div class="navbar_links">
             <ul class="list-unstyled d-flex align-items-center justify-content-end">
               <li class="nav_item"><a class="nav_link" href="">Home</a></li>
               <li class="nav_item"><a class="nav_link" href="">About us</a></li>
-              <li class="nav_item"><a class="nav_link" href="">
-                  <span>Services <i class="fas fa-chevron-down"></i> </span>
-                </a></li>
+              <li class="nav_item submenu_parent">
+                <a class="nav_link" href="">
+                  <span>Services</span>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="submenu">
+                  <div class="clients_submenu_wrapper">
+                    <ul class="list-unstyled">
+                      <li class="sub_item"><a class="sub_link" href="">All Services</a></li>
+                      <li class="sub_item"><a class="sub_link" href="">Mobile Application Development</a></li>
+                      <li class="sub_item"><a class="sub_link" href="">Web Applications</a></li>
+                      <li class="sub_item"><a class="sub_link" href="">Online Marketing</a></li>
+                      <li class="sub_item"><a class="sub_link" href="">Blockchain Development</a></li>
+                      <li class="sub_item"><a class="sub_link" href="">Smart Contract Audit</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
               <li class="nav_item"><a class="nav_link" href="">Our Team</a></li>
               <li class="nav_item"><a class="nav_link" href="">Contact</a></li>
             </ul>
           </div>
+
+          <div class="burger_menu">
+            <a href="#menu"><i class="fa-solid fa-bars-staggered"></i></a>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
+
 
 
   <div class="custom_breadcrumb">
@@ -60,6 +119,27 @@
     </div>
   </div>
 
+
+  <div class="subscripe_now">
+    <div class="container">
+      <div class="subscripe_now_wrapper">
+        <h5 class="sub_title">Subscribe Our Newsletter</h5>
+        <p class="sub_text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </p>
+        <form action="">
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="write your email">
+          </div>
+          <div class="subscripe">
+            <button class="btn_style">SUBSCRIBE</button>
+            <button class="btn_style">Contact</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <div class="service_details">
     <div class="container">
@@ -102,23 +182,7 @@
   </div>
 
 
-  <div class="subscripe_now">
-    <div class="container">
-      <div class="subscripe_now_wrapper">
-        <h5 class="sub_title">Subscribe Our Newsletter</h5>
-        <p class="sub_text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua.
-        </p>
-        <form action="">
-          <div class="form-group">
-            <button class="subscrip btn_style">SUBSCRIBE</button>
-            <input type="email" class="form-control" placeholder="write your email">
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+  
 
 
   <div class="footer">
@@ -163,6 +227,7 @@
   </div>
 
 
+
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
@@ -171,6 +236,20 @@
   <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
   <!-- for animation -->
   <script src="./assets/js/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+    integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+    integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
+    crossorigin="anonymous"></script>
+
+
+  <!-- for menue in mobile -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.js"
+    integrity="sha512-l2fHTYCLVbhRDc5CZWrkKJ06JWFjG5etNQ4G85PbyRiHP769IiVDmhwI0BYSFOXYJUYRmaq5PvfaxacZm9eqhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="./assets/js/main.js"></script>
 </body>

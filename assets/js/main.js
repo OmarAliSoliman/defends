@@ -53,12 +53,12 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".footer").length) {
-    $(".footer .back_to_top").on("click", function (e) {
-      e.preventDefault();
-      $("html, body").animate({ scrollTop: 0 }, "300");
-    });
-  }
+  // if ($(".footer").length) {
+  //   $(".footer .back_to_top").on("click", function (e) {
+  //     e.preventDefault();
+  //     $("html, body").animate({ scrollTop: 0 }, "300");
+  //   });
+  // }
 
   if ($(".custom_navbar").length) {
     $(window).scroll(() => {
@@ -84,8 +84,11 @@ $(document).ready(function () {
   AOS.init();
 });
 
-var scene = document.getElementById("scene");
+if($("#scene").length){
+  var scene = document.getElementById("scene");
 var parallaxInstance = new Parallax(scene);
+}
+
 
 var overlay = document.querySelector(".splashoverlay"),
   loader = document.querySelector(".overlay-loader"),
@@ -104,23 +107,23 @@ var animateOut = function () {
 };
 
 // counter loading page
-// var Cont = { val: 0 },
-//   NewVal = 100;
+var Cont = { val: 0 },
+  NewVal = 100;
 
-// TweenLite.to(Cont, 15, {
-//   val: NewVal,
-//   roundProps: "val",
-//   onUpdate: function () {
-//     document.getElementById("counter").innerHTML = Cont.val;
-//   },
-// });
+TweenLite.to(Cont, 15, {
+  val: NewVal,
+  roundProps: "val",
+  onUpdate: function () {
+    document.getElementById("counter").innerHTML = Cont.val;
+  },
+});
 
 
 $(window).on("load", function () {
   var currentDir = $("body").css("direction");
-  // setTimeout(() => {
-  //   animateOut();
-  // }, 2000);
+  setTimeout(() => {
+    animateOut();
+  }, 2000);
   new Mmenu("#menu", {
     offCanvas: {
       slidingSubmenus: false,

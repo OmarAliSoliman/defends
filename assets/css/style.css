@@ -199,7 +199,7 @@ p {
 
 .splashoverlay {
   z-index: 999;
-  background-color: #fff;
+  background-color: #00142c;
   position: fixed;
   top: 0;
   right: 0;
@@ -213,7 +213,7 @@ p {
 
 #counter {
   font-family: Guavast;
-  color: #101010;
+  color: #fff;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -880,27 +880,28 @@ body.modal-open .mm-slideout {
 .team_card .card_img {
   height: 300px;
   border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   overflow: hidden;
+  background-color: #00162f;
 }
 .team_card .card_img img {
   border-radius: 10px;
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
 }
 .team_card .team_info {
-  position: absolute;
   bottom: 0;
   width: 100%;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.43);
   padding: 20px 10px;
-  padding-bottom: 20px;
-  min-height: 110px;
   text-align: center;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   transition: all 0.2s ease-in-out;
   border-radius: 10px;
-  transform: translateY(10px);
 }
 .team_card .team_info h5 {
   color: #fff;
@@ -935,11 +936,6 @@ body.modal-open .mm-slideout {
 .team_card .team_info ul li:hover a {
   transform: scale(0.9);
 }
-.team_card:hover .team_info {
-  min-height: 400px;
-  transform: translate(0);
-}
-
 /* ================================================================ */
 .our_feedback {
   background-image: url("../images/cybercrime-cyber-security-e1615279045513.jpg");
@@ -1257,6 +1253,10 @@ body.modal-open .mm-slideout {
   .subscripe_now .subscripe .btn_style {
     margin: 5px;
     min-width: 100px !important;
+  }
+  .contact_map iframe {
+    margin-top: 50px;
+    height: 500px;
   }
 }
 /* ================================================================ */
