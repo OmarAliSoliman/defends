@@ -23,6 +23,54 @@
   <!-- for english version please change style to ar style ./assets/css/style-ar.css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <title>DefendXpert</title>
+  <style>
+
+    .info {
+        font-size: 0.8em;
+        color: #FF6600;
+        float: right;
+        margin: 5px 0;
+        display: block;
+    }
+
+    .mail-status {
+        font-size: 2em;
+        color: #FFFF;
+        letter-spacing: 2px;
+        padding-left: 5px;
+        padding-bottom: 17px;
+    }
+
+    @media(max-width:1600px) {
+
+
+        .info {
+            font-size: 1.4em;
+        }
+    }
+
+    @media(max-width: 600px) {
+        .info {
+            font-size: 1em;
+            margin: 2px 0;
+        }
+        #mail-status_success {
+            margin-bottom: 2%;
+            font-size: initial;
+            color: green;
+            text-align: -webkit-center;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 7px !important;
+            background: rgb(255, 255, 255);
+            /* display: none; */
+            font-size: 1.1rem !important;
+            width: 60%;
+            margin: 10px auto;
+            border-radius: 20px !important;
+
+        }
+    }
+</style>
 </head>
 
 <body class="body_color">
@@ -38,30 +86,30 @@
   <nav id="menu">
     <ul>
       <li>
-        <span><a href="">Home</a></span>
+        <span><a href="./index.html">Home</a></span>
       </li>
       <li>
-        <span><a href="">About us</a></span>
+        <span><a href="./about-us.html">About us</a></span>
       </li>
 
       <li>
-        <span><a href="">Services</a></span>
+        <span><a href="./services.html">Services</a></span>
         <ul>
-          <li><a href="">All Services</a></li>
-          <li><a href="">Mobile Application Development</a></li>
-          <li><a href="">Web Applications</a></li>
-          <li><a href="">Online Marketing</a></li>
-          <li><a href="">Blockchain Development</a></li>
-          <li><a href="">Smart Contract Audit</a></li>
+          <li><a href="./services.html">All Services</a></li>
+          <li><a href="./service-details.html">Mobile Application Development</a></li>
+          <li><a href="./service-details.html">Web Applications</a></li>
+          <li><a href="./service-details.html">Online Marketing</a></li>
+          <li><a href="./service-details.html">Blockchain Development</a></li>
+          <li><a href="./service-details.html">Smart Contract Audit</a></li>
         </ul>
       </li>
 
       <li>
-        <span><a href="">Our Team</a></span>
+        <span><a href="./our-team.html">Our Team</a></span>
       </li>
 
       <li>
-        <span><a href="">Contact</a></span>
+        <span><a href="./contact-us.html">Contact</a></span>
       </li>
 
     </ul>
@@ -78,28 +126,28 @@
         <div class="col-6 col-md-9 col-lg-9">
           <div class="navbar_links">
             <ul class="list-unstyled d-flex align-items-center justify-content-end">
-              <li class="nav_item"><a class="nav_link" href="">Home</a></li>
-              <li class="nav_item"><a class="nav_link" href="">About us</a></li>
+              <li class="nav_item"><a class="nav_link" href="./index.html">Home</a></li>
+              <li class="nav_item"><a class="nav_link" href="./about-us.html">About us</a></li>
               <li class="nav_item submenu_parent">
-                <a class="nav_link" href="">
+                <a class="nav_link" href="./services.html">
                   <span>Services</span>
                   <i class="fas fa-chevron-down"></i>
                 </a>
                 <div class="submenu">
                   <div class="clients_submenu_wrapper">
                     <ul class="list-unstyled">
-                      <li class="sub_item"><a class="sub_link" href="">All Services</a></li>
-                      <li class="sub_item"><a class="sub_link" href="">Mobile Application Development</a></li>
-                      <li class="sub_item"><a class="sub_link" href="">Web Applications</a></li>
-                      <li class="sub_item"><a class="sub_link" href="">Online Marketing</a></li>
-                      <li class="sub_item"><a class="sub_link" href="">Blockchain Development</a></li>
-                      <li class="sub_item"><a class="sub_link" href="">Smart Contract Audit</a></li>
+                      <li class="sub_item"><a class="sub_link" href="./services.html">All Services</a></li>
+                      <li class="sub_item"><a class="sub_link" href="./service-details.html">Mobile Application Development</a></li>
+                      <li class="sub_item"><a class="sub_link" href="./service-details.html">Web Applications</a></li>
+                      <li class="sub_item"><a class="sub_link" href="./service-details.html">Online Marketing</a></li>
+                      <li class="sub_item"><a class="sub_link" href="./service-details.html">Blockchain Development</a></li>
+                      <li class="sub_item"><a class="sub_link" href="./service-details.html">Smart Contract Audit</a></li>
                     </ul>
                   </div>
                 </div>
               </li>
-              <li class="nav_item"><a class="nav_link" href="">Our Team</a></li>
-              <li class="nav_item"><a class="nav_link" href="">Contact</a></li>
+              <li class="nav_item"><a class="nav_link" href="./our-team.html">Our Team</a></li>
+              <li class="nav_item"><a class="nav_link" href="./contact-us.html">Contact</a></li>
             </ul>
           </div>
 
@@ -126,7 +174,7 @@
     </div>
   </div>
 
-  <div class="subscripe_now">
+  <!-- <div class="subscripe_now">
     <div class="container">
       <div class="subscripe_now_wrapper">
         <h5 class="sub_title">Subscribe Our Newsletter</h5>
@@ -145,7 +193,7 @@
         </form>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="contact_us_page">
     <div class="container">
@@ -159,34 +207,50 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation
               </p>
+              <p style="margin-bottom: 2%;font-size: initial;color: green;text-align: -webkit-center; display:none;     border: 1px solid #fff;
+              padding: 20px;
+              background: #fff;
+              border-radius: 5px;" id="mail-status_success">Thank you for your message</p>
+              <p style="margin-bottom: 2%;font-size: initial;color: white;text-align: -webkit-center; display:none;     border: 1px solid red;
+              padding: 20px;
+              background: red;
+              border-radius: 5px;" id="mail-status_error"> Please Try Again Later </p>
             </div>
-            <form action="">
+            <form  id="contactForm"
+            method="post" class="myform" action="" >
               <div class="col-sm-12 col-lg-12">
                 <div class="form-group">
-                  <input type="text" placeholder="Your Name" class="form-control">
+                  <input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+                  <span id="userName-info" class="info"></span>
                 </div>
               </div>
               <div class="col-sm-12 col-lg-12">
                 <div class="form-group">
-                  <input type="email" placeholder="Your Email" class="form-control">
-                </div>
-              </div>
-
-              <div class="col-sm-12 col-lg-12">
-                <div class="form-group">
-                  <input type="text" placeholder="Your Subject" class="form-control">
+                  <input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+                  <span id="userEmail-info" class="info"></span>
                 </div>
               </div>
 
               <div class="col-sm-12 col-lg-12">
                 <div class="form-group">
-                  <textarea name="" id="" class="form-control" placeholder="Your Message"></textarea>
+                  <input type="text" placeholder="Your Subject" class="form-control" name="subject" id="subject">
+                  <span id="subject-info" class="info"></span>
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-lg-12">
+                <div class="form-group">
+                  <textarea name="message" id="message" class="form-control" placeholder="Your Message"></textarea>
+                  <span id="content-info" class="info"></span>
                 </div>
               </div>
 
               <div class="col-sm-12 col-lg-12">
                 <div class="btn_submit mt-5">
-                  <button type="submit" class="btn_style">Send Message</button>
+                  <button type="button" class="btn_style send-button"  onClick="sendContact();">Send Message</button>
+                  <div class="spinner-border" role="status" id="mail-status" style="display:none;">
+                    <span style="color: white; font-size: 15px;"></span>
+                </div>
                 </div>
               </div>
 
@@ -292,8 +356,6 @@
     </div>
   </div>
 
-
-
   <script src="./assets/js/jquery-3.6.0.min.js"></script>
   <script src="./assets/js/popper.min.js"></script>
   <script src="./assets/js/bootstrap.min.js"></script>
@@ -318,6 +380,123 @@
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="./assets/js/main.js"></script>
+  <script>
+
+    function sendContact() {
+        $('#mail-status_success').hide();
+        $('#mail-status_error').hide();
+
+        var valid;
+        valid = validateContact();
+        if (valid) {
+
+            $('.send-button').hide();
+            $("#mail-status").show();
+
+            jQuery.ajax({
+                url: "contact_mail.php",
+                data: 'name=' + $("#name").val() + '&email=' +
+                    $("#email").val() + '&subject=' +
+                    $("#subject").val() + '&message=' +
+                    $('#message').val(),
+                type: "POST",
+                success: function (data) {
+                    // $("#mail-status").html(data);
+
+                    $('.send-button').show();
+                    $('#mail-status').hide();
+
+                    var d = JSON.parse(data);
+                    if (d.status === 'error') {
+                        $("#mail-status_error").show().delay(10000).hide(0);
+                    } else {
+                        $('#contactForm')[0].reset();
+                        $("#mail-status_success").show().delay(10000).hide(0);
+                    }
+
+                },
+                error: function () {}
+            });
+        }
+    }
+
+    function validateContact() {
+        var valid = true;
+        $(".demoInputBox").css('background-color', '');
+        $(".info").html('');
+
+        if (!$("#name").val()) {
+            $("#userName-info").html("* Name is required");
+            $("#name").css('border-bottom', '2px solid #722382');
+            valid = false;
+        } else if (!isValidUserName($("#name").val())) {
+            $("#userName-info").html("* Name can only contain letters and spaces");
+            $("#name").css('border-bottom', '2px solid #722382');
+            valid = false;
+        } else {
+            $("#name").css('border-bottom', '2px solid #fff');
+        }
+
+        if (!$("#email").val()) {
+          console.log($("#email").val());
+            $("#userEmail-info").html("* Email is required");
+            $("#email").css('border-bottom', '2px solid #722382');
+            valid = false;
+        } else {
+            $("#email").css('border-bottom', '2px solid #fff');
+        }
+
+        if (!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+            $("#userEmail-info").html("* Email not valid");
+            $("#email").css('border-bottom', '2px solid #722382');
+            valid = false;
+        } else {
+            // $("#userEmail").css('border-bottom', '2px solid #fff');
+        }
+        if (!$("#subject").val()) {
+            $("#subject-info").html("* Subject is required");
+            $("#subject").css('border', '2px solid #722382');
+            valid = false;
+        } else if (!isValidContent($("#subject").val())) {
+            $("#subject-info").html("* Subject cannot contain script or HTML tags");
+            $("#subject").css('border', '2px solid #722382');
+            valid = false;
+        } else {
+            $("#subject").css('border', '2px solid #fff');
+        }
+        if (!$("#message").val()) {
+            $("#content-info").html("* Message is required");
+            $("textarea#message").css('border', '2px solid #722382');
+            valid = false;
+        } else if (!isValidContent($("#content").val())) {
+            $("#content-info").html("* Content cannot contain script or HTML tags");
+            $("textarea#message").css('border', '2px solid #722382');
+            valid = false;
+        } else {
+            $("textarea#message").css('border', '2px solid #fff');
+        }
+        return valid;
+    }
+
+
+    function isValidUserName(name) {
+        // Regular expression to check if username contains only letters and spaces
+        return /^[A-Za-z\s]+$/.test(name);
+    }
+
+
+    function isValidEmail(emailAddress) {
+        const re =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(emailAddress).toLowerCase());
+    };
+
+    function isValidContent(content) {
+        // Regular expression to check if content contains script or HTML tags
+        return !/<(.*?)script(.*?)>|<(.*?)\/(.*?)script(.*?)>|<(.*?)style(.*?)>|<(.*?)\/(.*?)style(.*?)>|<.*?>/
+            .test(content);
+    }
+</script>
 </body>
 
 </html>

@@ -1036,6 +1036,7 @@ body.modal-open .mm-slideout {
   border: 0;
   border-radius: 5px;
   padding: 10px 20px;
+  color: #fff;
 }
 .contact_us_page textarea.form-control {
   height: 150px !important;
